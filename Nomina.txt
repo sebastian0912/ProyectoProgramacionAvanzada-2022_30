@@ -1,0 +1,26 @@
+Ana Castro%123%Profesor
+Titular
+Programacion Avanzada,10
+POO,20
+#
+Berenice Maria Suarez%456%Empleado
+Contabilidad
+5
+#
+Estefania Bermudez Arroyo%567%Monitor
+Programacion Avanzada,30
+Programacion Avanzada,30
+#
+Alejandro Sierra%222%Profesor
+Asistente
+Bases de Datos,50
+Gestion de Datos,30
+#
+Diana Bustamante%333%Empleado
+Personal Administrativo
+2
+#
+Juan Garces%444%Monitor
+Ingeniería de Sw,15
+#
+FIN
