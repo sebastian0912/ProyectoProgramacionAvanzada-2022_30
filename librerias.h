@@ -1,6 +1,6 @@
 #ifndef _LIBRERIAS_H_
 #define _LIBRERIAS_H_
-//Hecho Por Juliana Camila Castro Neiza
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -99,7 +99,6 @@ void lecturaArchivoYGuardado(vector<char *> &empleados, string filename, vector<
         //  Separar datos
         if (strstr(empleados[i], "Profesor"))
         {
-
             char *token = strtok(empleados[i], "%-");
             while (token != NULL)
             {
@@ -232,6 +231,7 @@ void lecturaArchivoYGuardado(vector<char *> &empleados, string filename, vector<
 
     // elimina un valor basura que se agrega al final del vector
     lista.listaEmpleados.pop_back();
+
     cout << endl
          << " --> Empleados Cargados" << endl
          << endl;
@@ -240,7 +240,7 @@ void lecturaArchivoYGuardado(vector<char *> &empleados, string filename, vector<
 /*Verifica que se guarde un empleado, un profesor o un monitor repetido*/
 bool verificarSiUnEmpleadoExiste(string tipo, struct tipos lista, Empleado emp, Profesor prof, monitor mom)
 {
-    vector<Empleado>::iterator it;
+    vector<Empleado>::iterator it; //1 2 3 4 5 8 6 98 7 
     vector<Profesor>::iterator it2;
     vector<monitor>::iterator it3;
 
@@ -530,11 +530,12 @@ double calcularSalarioEmpleado(tipos lista)
                 salario = ((it->salarios * 1000000) - ((it->salarios * 1000000) * 0.10)) * 0.75;
                 return salario;
             }
-            else if (it->salarios > 4)
+            else if (it->salarios <= 4)
             {
                 salario = ((it->salarios * 1000000) - ((it->salarios * 1000000) * 0.08)) * 0.75;
                 return salario;
             }
+            
         }
     }
     return 0;
@@ -925,6 +926,7 @@ void persistenciaNomina(tipos lista)
     vector<monitor>::iterator it3;
     vector<asignatura>::iterator it5;
     struct Empleado *empleado;
+
     for (it = lista.listaEmpleados.begin(); it != lista.listaEmpleados.end(); it++)
     {
         if (archi.is_open())

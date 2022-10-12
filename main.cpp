@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 
-//Hecho Por Juliana Camila Castro Neiza
+
 
 using namespace std;
 
