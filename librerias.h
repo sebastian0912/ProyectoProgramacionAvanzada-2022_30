@@ -10,6 +10,16 @@
 
 using namespace std;
 
+
+struct rete
+{
+    char *nombre = new char[30];
+    double documento;
+    char *cargo = new char[20];
+    double salario;
+    double retefuente;
+};
+
 struct Empleado
 {
     char nombre[45];
@@ -52,14 +62,6 @@ struct tipos
     vector<monitor> listaMonitores;
 };
 
-struct rete
-{
-    char *nombre = new char[30];
-    double documento;
-    char *cargo = new char[20];
-    double salario;
-    double retefuente;
-};
 
 /*Lee el archivo y guarda los datos en un vector de empleados, y luegos los separa 
 por caracteres, y luego los distribuye en los diferentes vectores segun el tipo*/
