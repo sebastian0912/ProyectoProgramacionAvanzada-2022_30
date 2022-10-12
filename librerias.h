@@ -474,7 +474,7 @@ void adicionarAsignaturaProfesor(struct tipos &lista)
     asignatura asig;
     cout << "Ingrese la cedula del profesor: ";
     cin >> cedula;
-    vector<Profesor>::iterator it;
+    vector<Profesor>::iterator it; 
     for (it = lista.listaProfesores.begin(); it != lista.listaProfesores.end(); it++)
     {
         if (it->documento == cedula)
@@ -749,6 +749,7 @@ void listarEmpleadosRetencion(tipos lista, vector<rete> &listaRetencion)
                 acumulador += it5->numeroDeHoras;
             }
             retencion.salario = salario * acumulador;
+
             if (retencion.salario > 5700600)
             {
                 retencion.retefuente = retencion.salario * 0.28;
@@ -823,6 +824,8 @@ void generarNomina(tipos &lista)
     // escribir en archivo de texto la lista de empleados
     ofstream archivo;
     archivo.open("Reporte.txt");
+ 
+
     for (it = lista.listaEmpleados.begin(); it != lista.listaEmpleados.end(); it++)
     {
         archivo << it->nombre << ",";

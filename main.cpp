@@ -15,8 +15,7 @@ int main()
     vector<monitor> listaMonitores;
     vector<rete> listaRete;
     struct tipos lista;
-    double salMon, salProf, salEmp;
-    
+    double salMon, salProf, salEmp;    
     
     bool continuar = true;
     int opcion;
